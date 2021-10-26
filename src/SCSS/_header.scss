@@ -1,0 +1,101 @@
+.header {
+    &__content {
+        background-color: #333333;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 100px;
+        position: relative;
+    }
+    &__logo {
+        width: 235px;
+        margin-right: 20px;
+        & img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__search {
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        &-input {
+            position: relative;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            & input {
+                width: 100%;
+                padding: 7px;
+                border: 1px solid #353535;
+                outline: none;
+                font-style: italic;
+                &:focus {
+                    border-color: #fff601;
+                }
+            }
+        }
+        &-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #666;
+            cursor: pointer;
+        }
+        &-desc {
+            font-size: $textSize2;
+            font-style: italic;
+            margin-top: 5px;
+            color: #dcdcdc;
+        }
+    }
+    &__options {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        &-login {
+            color: $textColor;
+            padding: 0 10px;
+            cursor: pointer;
+            & span {
+                margin-left: 5px;
+            }
+            &:hover {
+                color: #ccc;
+            }
+        }
+    }
+    &__categary {
+        position: relative;
+        background-color: #2d2d2d;
+        padding: 10px 100px;
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-item {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding: 5px 0;
+            color: $textColor;
+            text-transform: uppercase;
+            &.active {
+                color: $primaryColor;
+                border-bottom: 2px solid #ccc;
+            }
+        }
+        &-link {
+            color: inherit;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+}

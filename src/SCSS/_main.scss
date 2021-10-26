@@ -1,0 +1,216 @@
+.main {
+    background-color: #02080f;
+    padding: 10px 100px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    &__left {
+        width: 80%;
+        padding: 0 10px;
+    }
+
+    &__heading {
+        margin-bottom: 40px;
+        &-title {
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-bottom: 20px;
+            & h2 {
+                color: $primaryColor;
+                padding: 5px 20px;
+                font-size: 1.5rem;
+                font-weight: normal;
+                text-transform: uppercase;
+                border-bottom: 2px solid $primaryColor;
+            }
+            & span {
+                margin-left: 10px;
+                padding: 5px 20px;
+                color: #fff;
+                font-size: 1rem;
+                border-bottom: 2px solid #ccc;
+                cursor: pointer;
+                &:hover {
+                    color: $primaryColor;
+                    border-color: $primaryColor;
+                }
+            }
+        }
+    }
+    &__item {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px 10px;
+
+        &-list {
+            width: 100%;
+            position: relative;
+            background-color: #181818;
+            /*             display: flex;
+            align-items: center;
+            flex-direction: column; */
+            cursor: pointer;
+            transition: all 0.2s linear;
+            border-radius: 3px;
+            overflow: hidden;
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+        &-img {
+            width: 100%;
+            height: 290px;
+            & img {
+                width: 100%;
+                height: 100%;
+                /* object-fit: cover; */
+                flex-shrink: 0;
+            }
+        }
+        &-fimName {
+            flex: 1;
+            flex-shrink: 1;
+            height: 60px;
+            padding: 7px 5px;
+            color: $textColor;
+            font-size: 1rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-transform: capitalize;
+            /* display: -webkit-box; */
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
+        }
+        &-fimPart {
+            color: $textColor;
+            position: absolute;
+            top: 7px;
+            left: 0;
+            padding: 5px;
+            background-color: #a3765d;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            font-size: 0.7rem;
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+        }
+        &-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            background-color: rgba(117, 65, 124, 0.7);
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: $textColor;
+            font-size: 1rem;
+        }
+        &-list:hover > &-play {
+            display: flex;
+            transition: display 0.5s linear;
+        }
+    }
+    & .title-right {
+        width: 100%;
+        border-bottom: 2px dashed #ccc;
+        display: block;
+        text-align: start;
+        & .heading-right {
+            border-bottom: none;
+        }
+    }
+    &__right {
+        width: 20%;
+        padding: 0 10px;
+        color: white;
+        &-item {
+            width: 100%;
+            position: relative;
+            display: flex;
+            margin-bottom: 10px;
+            padding: 5px;
+            &:nth-child(odd) {
+                background-color: #181818;
+            }
+            & img {
+                width: 90px;
+                height: 100px;
+                flex-shrink: 0;
+                object-fit: cover;
+                border: 1px solid $textColor;
+                cursor: pointer;
+            }
+        }
+        &-desc {
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 7px;
+            & h4 {
+                font-size: $textSize;
+                font-weight: 500;
+                text-transform: capitalize;
+                cursor: pointer;
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+        &-year {
+            font-size: $textSize2;
+            color: #bababa;
+        }
+        &-rating {
+            font-size: $textSize2;
+            color: #eb9e00;
+        }
+        &-index {
+            padding: 3px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $primaryColor;
+            border-radius: 50%;
+            font-size: $textSize2;
+            text-align: center;
+        }
+        & .slotCare {
+            font-style: italic;
+        }
+    }
+    &__trending {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        margin-bottom: 20px;
+        &-options {
+            padding: 6px;
+            cursor: pointer;
+            font-size: $textSize;
+            font-weight: 500;
+            &.active {
+                background-color: #5d5d5d;
+            }
+            &:hover {
+                background-color: #333;
+            }
+        }
+    }
+    & .trending__item {
+        align-items: center;
+        justify-content: flex-start;
+    }
+}

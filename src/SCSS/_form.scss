@@ -1,0 +1,73 @@
+.form__authen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    & .form {
+        width: 500px;
+        background-color: $textColor;
+        border-radius: 5px;
+        padding: 20px;
+        position: relative;
+        &__heading {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        &__title {
+            font-size: 1.4rem;
+        }
+        &__close {
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        &__group {
+            width: 100%;
+            margin-bottom: 15px;
+
+            overflow: hidden;
+            & input {
+                width: 100%;
+                padding: 8px 10px;
+                outline: none;
+                border-radius: 3px;
+                border: 1px solid #ccc;
+                font-size: $textSize;
+                &:hover,
+                &:focus {
+                    border-color: #36a2f0;
+                }
+            }
+            & .btn__submit {
+                width: 100%;
+                padding: 9px 10px;
+                background: #36a2f0;
+                font-size: $textSize;
+                color: $textColor;
+                border-radius: 3px;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+            & .have__acc {
+                font-size: $textSize;
+                margin-right: 15px;
+            }
+            & .btn__options {
+                padding: 5px;
+                background: #36a2f0;
+                color: $textColor;
+                font-size: $textSize2;
+                border-radius: 3px;
+            }
+        }
+    }
+}

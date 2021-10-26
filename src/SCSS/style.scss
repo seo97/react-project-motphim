@@ -1,0 +1,29 @@
+$primaryColor: #c58560;
+$textColor: #ffffff;
+$textSize: 0.9rem;
+$textSize2: 0.8rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 0 100px;
+}
+@import "header";
+@import "main";
+@import "form";
+@import "slides";
